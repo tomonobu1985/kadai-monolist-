@@ -26,6 +26,8 @@ Route::get('logout', 'Auth\AuthController@getLogout')->name('logout.get');
 //    Route::resource('items', 'ItemsController', ['only' => ['create']]);
 //});
 
+// ランキング（Want）
+Route::get('ranking/want', 'RankingController@want')->name('ranking.want');
 
 // want機能
 Route::group(['middleware' => 'auth'], function () {
@@ -34,6 +36,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('want', 'ItemUserController@dont_want')->name('item_user.dont_want');
     Route::resource('users', 'UsersController', ['only' => ['show']]);
 });
+
+// ランキング（Have）
+Route::get('ranking/have', 'RankingController@have')->name('ranking.have');
 
 // have機能
 Route::group(['middleware' => 'auth'], function () {
