@@ -23,4 +23,15 @@ class WelcomeController extends Controller
             'items' => $items,
         ]);
     }
+    public function create()
+    {
+        //
+        
+    }
+    public function show()
+    {
+        //
+        
+    }
+    
 }
